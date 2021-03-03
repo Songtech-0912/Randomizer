@@ -1,0 +1,19 @@
+{
+  "name": "random-python",
+  "version": "1.0.0",
+  "description": "A GUI wrapper around a python random number generator script",
+  "scripts": {
+    "test": "bash test.sh",
+    "debug": "npx tailwindcss-cli build style.css -o output.style.css",
+    "build": "export NODE_ENV=production && npx tailwindcss-cli build style.css -o output.style.css",
+    "build:win": "cross-env NODE_ENV=production && npx tailwindcss-cli build style.css -o output.style.css"
+  },
+  "author": "Yuxuan Song",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "autoprefixer": "^10.2.1",
+    "cross-env": "^7.0.3",
+    "postcss": "^8.2.3",
+    "tailwindcss": "^2.0.2"
+  }
+}
