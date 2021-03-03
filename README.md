@@ -1,11 +1,10 @@
 # Randomizer
 
 <!--Badges here-->
-!![Sourcery](https://img.shields.io/badge/Sourcery-enabled-brightgreen)](https://sourcery.ai)
 
 A random number generator app that uses the [pywebview](https://https://pywebview.flowrl.com/) library. Read below for more details.
 
-![App Screenshot](Python-Randomizer-App-Demo.gif)
+![App Screenshot](./images/Randomizer-Demo.png)
 
 ## What is this?
 
