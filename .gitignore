@@ -1,4 +1,10 @@
 # -*- mode: gitignore; -*-
+
+# binaries and build caches
+dist
+build
+*.spec
+
 *~
 \#*\#
 /.emacs.desktop
