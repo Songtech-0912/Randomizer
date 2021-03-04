@@ -1,3 +1,4 @@
+#!/usr/bin/python
 """
 Randomizer
 ~~~~~~~~~~~~~~~~~
@@ -77,6 +78,7 @@ if __name__ == "__main__":
     window = webview.create_window(
         "Randomizer",
         "index.html",
+	confirm_close=True,
         width=1200,
         height=900
     )
