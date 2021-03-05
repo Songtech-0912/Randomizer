@@ -1,6 +1,7 @@
 echo Clearing build artifacts...
 rm -rf *.spec
 rm -rf build
+rm -rf cache
 rm -rf __pycache__
 while true; do
     read -p "Do you also want to delete generated executables? " yn
