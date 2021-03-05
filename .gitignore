@@ -4,10 +4,12 @@
 dist
 build
 *.spec
+github-releases
 
 *~
 \#*\#
 /.emacs.desktop
+*.temp
 /.emacs.desktop.lock
 *.elc
 auto-save-list
