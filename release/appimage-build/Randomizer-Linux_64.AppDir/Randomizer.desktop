@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Randomizer
+Keywords=Randomizer
+Exec=Randomizer
+Terminal=false
+Icon=Randomizer
+StartupNotify=false
+Type=Application
+Categories=Utility;
