@@ -12,15 +12,15 @@ If you're a python developer, you've likely sniggered at the "poor" JavaScript d
 
 Of course, I'm talking about ElectronJS. Yes, it's (literally) coarse, rough, irritating, and gets everywhere; but you've got to admit that those sleek electron apps look cool and modern. No Python framework truly comes close to power of HTML, CSS and JS. 
 
-Pywebview is the best of both worlds. It's fast, runs natively, and works cross-platform; but it fits in perfectly to the HTML/CSS/JS family. You can write you app in Python, design its interface in web technologies, and package it as a <10MB binary.
+Pywebview is the best of both worlds. It's fast, runs natively, and works cross-platform; but it fits in perfectly to the HTML/CSS/JS family. You can write you app in Python, design its interface in web technologies, and package it as a <40MB binary.
 
 As an example of what you can do with pywebview, I've made this app. It demonstrates many of pywebview's features, such as page transitions, interdomain communication, and passing variables between Python and JavaScript. And yeah - it's also a pretty good random number generator.
 
 # Try it out
 
-Download the AppImage, Mac App or Windows App from [here](#).
+Download the AppImage, Mac App or Windows App from [here](https://github.com/Songtech-0912/Randomizer/releases).
 
-Alternatively you can [run from source](#running-from-source).
+Alternatively you can run from source, following the instructions below.
 
 # Running from source
 
@@ -30,12 +30,30 @@ If you are running from source, be sure to be familiar with the terminal. If not
 
 Before you can run from source, make sure you have dependencies installed:
 
-### MacOS
+### MacOS/Linux
 
-You need Python 3+ (ideally version 3.3+) installed. To check if you have python installed:
+You need Python 3+ (ideally version 3.3+) installed. To check if you have python installed, run this command:
 
 ```
-[[ "$(python3 -V)" =~ "Python 3" ]] && echo "Python 3 is installed"
+[[ "$(python -V)" =~ "Python 3" ]] && echo "Python 3+ is installed"
+```
+
+On some Linux distributions and if you're on MacOS, the `python` command is replaced by a command called `python3`. If that's the case, and the first command fails, run this instead:
+
+```
+[[ "$(python3 -V)" =~ "Python 3" ]] && echo "Python 3+ is installed"
+```
+
+You will also need to have `pip` installed (on some Linux distributions, `pip` is called `pip3`). Check if you have it like this:
+
+```
+[[ "$(pip -V)" =~ "pip 20" ]] && echo "Pip 20+ is installed"
+```
+
+Alternatively, if this command fails, run the alternative form of the command:
+
+```
+[[ "$(pip3 -V)" =~ "pip 20" ]] && echo "Pip 20+ is installed"
 ```
 
 Then, install pywebview:
@@ -44,7 +62,31 @@ Then, install pywebview:
 pip install pywebview
 ```
 
-You can now proceed to [building and running](#build-and-run).
+If that does not work, then try running this instead:
+
+```
+pip3 install pywebview
+```
+
+Now, clone this repository:
+
+```
+git clone https://github.com/Songtech-0912/Randomizer.git && cd Randomizer
+```
+
+Make Randomizer executable:
+
+```
+chmod a+x Randomizer.py
+```
+
+And finally, run Randomizer:
+
+```
+./Randomizer.py
+```
+
+Ran into an issue? See [FAQ](FAQ.md) to find a solution to your problem.
 
 ### Windows
 
@@ -56,96 +98,31 @@ python --version
 
 If the python version is at 2.x.x or the command fails, download python at <https://python.org>.
 
-It is also *recommended* (though not required) that you have `git` installed. 
+It is also required that you have `git` installed. Just go to <https://git-scm.com/download/win>, and run the installer to install it.
 
-### Arch-based Linux
-
-> If you're using Arch Linux/Manjaro/Arcolinux (like me) then follow these steps
-
-Install python (though you should have it already):
+To begin, clone this repository:
 
 ```
-sudo pacman -S python
+git clone https://github.com/Songtech-0912/Randomizer.git && cd Randomizer
 ```
 
-**If you are using Anaconda or Miniconda, please deactivate it like this!**
-
-``` sh
-conda config --set auto_activate_base false && CONDA_AUTO_ACTIVATE_BASE=false
-```
-
-``` sh
-[[ "$(which python)" =~ "/usr/bin/python" ]] && echo "Python installation is correct"
-# assuming this command outputs "Python installation is correct", then you're all good!
-```
-
-Install GTK and its dependencies:
-
-``` sh
-sudo pacman -S python-gobject gtk3
-```
-
-Install pywebview via pip:
+Install `pywebview` as a dependency:
 
 ```
 pip install pywebview
 ```
 
-### Debian-based Linux
-
-> This is for users of Linux Mint, Ubuntu, Debian, ElementaryOS, and others that use the `apt` package manager
-
-Assuming you are using Ubuntu 20+, you will have python3 and pip already installed. If you have not, install it with:
+And finally, run Randomizer:
 
 ```
-sudo apt update && sudo apt install python3.9
+python Randomizer.py
 ```
 
-You will need GTK and python-gobject as well. To install those, run:
+## Compiling Executables
 
-```
-sudo apt install python3-gi python3-gi-cairo gir1.2-gtk-3.0 gir1.2-webkit2-4.0
-```
+> You don't *have* to compile executables to try Randomizer out! Instead, download a pre-built version [here](https://github.com/Songtech-0912/Randomizer/releases). If you want to modify the source code, you can just run the python file. Unless if you're a developer wishing to distribute a modified form of Randomizer, I wouldn't recommend compiling Randomizer.
 
-Then, you need to install pywebview:
-
-```
-pip3 install pywebview
-```
-
-### Fedora-based Linux
-
-> This is for users of Fedora, CentOS, Red Hat Linux and its other derivatives (specifically those that use the `dnf` package manager)
-
-Fedora-based Linux distributions have python3 preinstalled. If for whatever reason you do not have python3 installed, you may install it like this:
-
-```
-sudo dnf install python3
-```
-
-Then, install GTK and python-gobject, like this
-
-```
-
-```
-
-Then, you need to install pywebview:
-
-```
-pip3 install pywebview
-```
-
-### Other Linux distributions
-
-The steps to installing dependencies on all other distributions can be broken down into these general steps:
-
-* Install a version of Python (has to be v3.3+)
-* Install GTK and python bindings to GTK
-* Run `pip install pywebview`
-
-## Build and run
-
-First, you *must* make sure that you are using a vanilla distribution of python, instead of something like anaconda or miniconda. To check (on Mac and Linux distros):
+First, you *must* make sure that you are using a vanilla distribution of python, instead of something like anaconda or miniconda. To check (on Mac and Linux):
 
 ```
 which python
@@ -166,18 +143,73 @@ If this isn't the case, temporarily deactivate Anaconda/Miniconda so that it doe
 echo "alias python=/usr/bin/python" >> .zshrc && source ~/.zshrc
 ```
 
-Unfortunately, Windows users will have to delete Anaconda/Miniconda and install Python again.
+Unfortunately, Windows users will have to configure Anaconda/Miniconda manually to do this.
 
-Second, download the code, using `git`:
-
-```
-git clone https://github.com/Songtech-0912/Randomizer.git && cd random-python
-```
-
-Third, run the app:
+Make sure that you've cloned the repository:
 
 ```
-python app.py
+git clone https://github.com/Songtech-0912/Randomizer.git && cd Randomizer
 ```
 
-## Compiling Binaries
+Now, you can begin compiling, though the process will be different depending on whether you're on Mac/Linux or Windows
+
+### Compiling on Mac/Linux
+
+The Randomizer folder contains build scripts that should be able to build Randomizer automatically. These are managed by a `Makefile` at the root of the project.
+
+To compile, first install `pyinstaller` with `pip` or `pip3`:
+
+```
+# If your system uses pip
+pip install pyinstaller
+
+# If your system uses pip3 instead of pip
+pip3 install pyinstaller
+```
+
+It is recommended, but not required, to have `upx` installed (it optimizes the size of the binary):
+
+```
+# Debian
+sudo apt install upx
+
+# Arch
+sudo pacman -S upx
+
+# Fedora
+sudo rpm insall upx
+
+# Mac (homebrew)
+brew install upx
+```
+
+If you are building on Linux, it is also a good idea to delete extra GTK resources to keep executable size low.
+
+*Note that this will cause major display issues on a live machine, so please don't do this unless you are running a virtual machine or headless machine.*
+
+```
+cd /usr/share/icons && sudo rm -rf !("default")
+cd /usr/share/themes && sudo rm -rf !("Default")
+```
+
+Then, run the Makefile:
+
+```
+make && make build
+```
+
+If you want to build a Linux AppImage, then instead of the command listed above, run:
+
+```
+make && make build && make appimage 
+```
+
+If you want to build a Mac app, then run this command instead of the other two:
+
+```
+make && make macapp
+```
+
+### Compiling on Windows
+
+TODO - Not yet completed!
