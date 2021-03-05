@@ -47,16 +47,16 @@ def ended():
     print("Application is closed.")
 
 
-# output = ""
-
 # Main function that generates random numbers
 def generate_numbers(num1, num2):
     """Uses the random library to generate a random number.
-    Accepts two arguments as min/max ranges"""
-    randnum = random.randint(int(num1), int(num2))
-    output = str(randnum)
-    # callJavaScript()  # pass result (a number) to js
-    return output
+    Accepts two arguments as min/max ranges
+    Due to a randint bug, we have to make sure
+    that num1 < num2"""
+    if num1 > num2:
+        num1, num2 = num2, num1
+    number = random.randint(num1, num2)
+    return number  # pass result to javascript
 
 
 def main(window):
@@ -78,7 +78,6 @@ if __name__ == "__main__":
     window = webview.create_window(
         "Randomizer",
         "index.html",
-	confirm_close=True,
         width=1200,
         height=900
     )
