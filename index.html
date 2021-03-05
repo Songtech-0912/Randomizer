@@ -10,10 +10,10 @@
   <body>
     <!--App Shell Container-->
     <div id="screen1" class="bg-gray-200 h-screen w-screen flex justify-evenly">
-
       <!--App content with shadow BG-->
-      <div class="flex flex-col justify-center bg-white shadow-lg fs rounded-lg h-5/6 w-4/5 m-auto">
-
+      <div
+        class="flex flex-col justify-center bg-white shadow-lg fs rounded-lg h-5/6 w-4/5 m-auto"
+      >
         <!--Logo and description-->
         <div class="flex flex-col text-center w-full mb-16">
           <div class="mx-auto my-10">
@@ -28,7 +28,9 @@
               />
             </svg>
           </div>
-          <h1 class="text-3xl lg:text-4xl font-medium title-font mb-3 text-gray-900">
+          <h1
+            class="text-3xl lg:text-4xl font-medium title-font mb-3 text-gray-900"
+          >
             Generate Your Number
           </h1>
           <div class="text-grey-400 lg:text-xl">
@@ -38,26 +40,25 @@
 
         <!--Number Chooser Buttons-->
         <div class="flex space-x-16 flex-wrap mx-auto justify-center mx-8">
-
           <!--From button-->
           <div class="flex flex-row space-x-9 h-full">
-
             <!--Button label-->
             <div class="flex flex-col">
               <p class="text-grey-600">From</p>
               <p
-                id="value1" class="text-8xl font-medium title-font text-gray-900 text-right"
-                >
+                id="value1"
+                class="text-8xl font-medium title-font text-gray-900 text-right"
+              >
                 0
               </p>
             </div>
 
             <!--Actual buttons-->
             <div class="flex flex-col space-y-3">
-
               <!--Up button-->
               <button
-                id="up-button-1" class="transition duration-300 ease-in-out mb-3 flex mx-auto text-white bg-gray-700 hover:bg-gray-500 transform hover:-translate-y-1 hover:scale-110 border-0 py-4 px-5 rounded"
+                id="up-button-1"
+                class="transition duration-300 ease-in-out mb-3 flex mx-auto text-white bg-gray-700 hover:bg-gray-500 transform hover:-translate-y-1 hover:scale-110 border-0 py-4 px-5 rounded"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +74,8 @@
 
               <!--Down button-->
               <button
-                  id="down-button-1" class="transition duration-300 ease-in-out mb-3 flex mx-auto text-white bg-gray-700 hover:bg-gray-500 transform hover:-translate-y-1 hover:scale-110 border-0 py-4 px-5 rounded"
+                id="down-button-1"
+                class="transition duration-300 ease-in-out mb-3 flex mx-auto text-white bg-gray-700 hover:bg-gray-500 transform hover:-translate-y-1 hover:scale-110 border-0 py-4 px-5 rounded"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -86,18 +88,17 @@
                   />
                 </svg>
               </button>
-
             </div>
           </div>
 
           <!--To button-->
           <div class="flex flex-row space-x-9 h-full">
-
             <!--Button label-->
             <div class="flex flex-col">
               <p class="text-grey-600">To</p>
               <p
-                id="value2" class="text-8xl font-medium title-font text-gray-900 text-right"
+                id="value2"
+                class="text-8xl font-medium title-font text-gray-900 text-right"
               >
                 0
               </p>
@@ -105,10 +106,10 @@
 
             <!--Actual buttons-->
             <div class="flex flex-col space-y-3">
-
               <!--Up button-->
               <button
-                id="up-button-2" class="transition duration-300 ease-in-out mb-3 flex mx-auto text-white bg-gray-700 hover:bg-gray-500 transform hover:-translate-y-1 hover:scale-110 border-0 py-4 px-5 rounded"
+                id="up-button-2"
+                class="transition duration-300 ease-in-out mb-3 flex mx-auto text-white bg-gray-700 hover:bg-gray-500 transform hover:-translate-y-1 hover:scale-110 border-0 py-4 px-5 rounded"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +125,8 @@
 
               <!--Down button-->
               <button
-                  id="down-button-2" class="transition duration-300 ease-in-out mb-3 flex mx-auto text-white bg-gray-700 hover:bg-gray-500 transform hover:-translate-y-1 hover:scale-110 border-0 py-4 px-5 rounded"
+                id="down-button-2"
+                class="transition duration-300 ease-in-out mb-3 flex mx-auto text-white bg-gray-700 hover:bg-gray-500 transform hover:-translate-y-1 hover:scale-110 border-0 py-4 px-5 rounded"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +139,6 @@
                   />
                 </svg>
               </button>
-
             </div>
           </div>
           <div class="grid content-around text-center">
@@ -152,78 +153,90 @@
       </div>
     </div>
     <div id="screen2" class="bg-gray-200 p-32 h-screen hidden">
-        <div class="flex flex-col justify-center space-y-6 bg-white shadow-lg fs rounded-lg h-full">
-            <h1 id="output-number" class="text-12xl font-medium mx-auto"></h1>
-            <div class="flex flex-col space-y-3 mx-auto text-center">
-                <h2 class="text-2xl font-medium">Your number is</h2>
-                <a class="text-xl text-grey-400 underline" href="#" onclick="window.location.reload()">Start over</a>
-            </div>
+      <div
+        class="flex flex-col justify-center space-y-6 bg-white shadow-lg fs rounded-lg h-full"
+      >
+        <h1 id="output-number" class="text-12xl font-medium mx-auto"></h1>
+        <div class="flex flex-col space-y-3 mx-auto text-center">
+          <h2 class="text-2xl font-medium">Your number is</h2>
+          <a
+            class="text-xl text-grey-400 underline"
+            href="#"
+            onclick="window.location.reload()"
+            >Start over</a
+          >
         </div>
+      </div>
     </div>
     <script>
+      var output;
+      var goButton = document.getElementById("action-button");
+      var upButton1 = document.getElementById("up-button-1");
+      var downButton1 = document.getElementById("down-button-1");
+      var upButton2 = document.getElementById("up-button-2");
+      var downButton2 = document.getElementById("down-button-2");
+      var screen1 = document.getElementById("screen1");
+      var screen2 = document.getElementById("screen2");
+      var outputNumber = document.getElementById("output-number");
 
-     var goButton = document.getElementById("action-button");
-     var upButton1 = document.getElementById("up-button-1");
-     var downButton1 = document.getElementById("down-button-1");
-     var upButton2 = document.getElementById("up-button-2");
-     var downButton2 = document.getElementById("down-button-2");
-     var screen1 = document.getElementById("screen1");
-     var screen2 = document.getElementById("screen2");
-     var outputNumber = document.getElementById("output-number");
-     screen2.style.display = "none";
+      // Assign the min and max numbers as variables
+      var source1 = document.getElementById("value1");
+      var source2 = document.getElementById("value2");
+      var num1 = parseInt(source1.innerText);
+      var num2 = parseInt(source2.innerText);
+      // Hide the result screen at start
+      screen2.style.display = "none";
 
-     function showPythonResponse(output) {
-         outputNumber.innerText = output;
-     }
-
-      /* The Submit Button */
-     goButton.onclick = function () {
-         var source1 = document.getElementById("value1");
-         var source2 = document.getElementById("value2");
-         var num1 = parseInt(source1.innerText);
-         var num2 = parseInt(source2.innerText);
-         // hide first screen and show second
-         screen1.style.display = "none";
-         screen2.style.display = "block";
-         screen2.classList.add("pagechange");
-         // Pass variables num1 and num2 to python
-         // Then get the random number generated by python code
-         pywebview.api.generate_numbers(num1, num2).then(showPythonResponse);
-         console.log(output)
-     };
+      // This function displays the randomly-generated number on screen
+      function showPythonResponse(number) {
+        // The number variable is passed from python
+        outputNumber.innerText = number;
+      }
 
       /* The Left Top Add Button */
-     upButton1.onclick = function number1addOnClick() {
-         var source = document.getElementById("value1");
-         var value = parseInt(source.innerText);
-         var value_output = value + 1;
-         source.innerText = value_output;
-     };
+      upButton1.onclick = function () {
+        // Add one, then assign new value to num1
+        num1 += 1;
+        // Change the number displayed onscreen
+        source1.innerText = num1.toString();
+      };
+
+      /* The Left Bottom Add Button */
+      downButton1.onclick = function () {
+        // Minus one, then assign new value to num1
+        num1 -= 1;
+        // Change the number displayed onscreen
+        source1.innerText = num1.toString();
+      };
 
       /* The Right Top Add Button */
-     downButton1.onclick = function number1subtractOnClick() {
-         var source = document.getElementById("value1");
-         var value = parseInt(source.innerText);
-         var value_output = value - 1;
-         source.innerText = value_output;
-     };
-
-      /* The Right Top Add Button */
-     upButton2.onclick = function number2addOnClick() {
-         var source = document.getElementById("value2");
-         var value = parseInt(source.innerText);
-         var value_output = value + 1;
-         source.innerText = value_output;
-     };
+      upButton2.onclick = function () {
+        // Add one, then assign new value to num2
+        num2 += 1;
+        // Change the number displayed onscreen
+        source2.innerText = num2.toString();
+      };
 
       /* The Right Bottom Add Button */
-     downButton2.onclick = function number2subtractOnClick() {
-         var source = document.getElementById("value2");
-         var value = parseInt(source.innerText);
-         var value_output = value - 1;
-         source.innerText = value_output;
-     };
+      downButton2.onclick = function () {
+        // Minus one, then assign new value to num2
+        num2 -= 1;
+        // Change the number displayed onscreen
+        source2.innerText = num2.toString();
+      };
 
+      /* The Submit Button */
+      goButton.onclick = function () {
+        // hide first screen and show second
+        console.log(num1, num2);
+        screen1.style.display = "none";
+        screen2.style.display = "block";
+        screen2.classList.add("pagechange");
+        // Pass variables num1 and num2 to python
+        // Then get the random number generated by python code
+        console.log(num1, num2);
+        pywebview.api.generate_numbers(num1, num2).then(showPythonResponse);
+      };
     </script>
   </body>
 </html>
