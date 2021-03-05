@@ -3,3 +3,6 @@ build:
 
 clean:
 	bash clean.sh
+
+debug:
+	bash debug.sh
