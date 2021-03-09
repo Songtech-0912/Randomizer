@@ -1,9 +1,11 @@
 [Desktop Entry]
+Version=1.0
+Type=Application
 Name=Randomizer
 Keywords=Randomizer
 Exec=Randomizer
 Terminal=false
 Icon=Randomizer
 StartupNotify=false
-Type=Application
+StartupWMClass=Randomizer
 Categories=Utility;
